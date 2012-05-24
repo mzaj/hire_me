@@ -3,7 +3,7 @@ get '/' do
   erb :start, :layout => :default
 end
 
-get '/start' do
+post '/start' do
   first_name = params[:first_name]
   last_name = params[:last_name]
 
@@ -11,7 +11,7 @@ get '/start' do
   session_id = question_service.start_session({:first_name => first_name, :last_name => last_name})
 
   @session_id = session_id
-  @questions = question_service.get_questions(session_id)
+  @questions = question_service.get_all_questions(session_id)
   @current_question = question_service.get_question(@questions.first.id)
   erb :question, :layout => :default
 end
