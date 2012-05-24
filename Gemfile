@@ -10,4 +10,6 @@ group :development do
   gem 'rvm-capistrano', :require => ['capistrano']
   gem 'capistrano'
   gem 'capistrano-ext'
+  gem 'rake'
+  gem 'rspec'
 end

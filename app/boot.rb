@@ -7,7 +7,7 @@ Bundler.require(:default, HM_ENV)
 
 
 
-Dir["#{HM_ROOT}/models/**/*.rb"].each { |f| require(f) }
+Dir["#{HM_ROOT}/app/models/**/*.rb"].each { |f| require(f) }
 Dir["#{HM_ROOT}/controllers/**/*.rb"].each { |f| require(f) }
 
 
