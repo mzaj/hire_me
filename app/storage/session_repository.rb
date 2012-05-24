@@ -17,6 +17,12 @@ module HireMe
 
         sessions.save(session.to_hash)
       end
+
+      def get_session(id)
+      end
+
+      def update_session(session)
+      end
     end
   end
 end
