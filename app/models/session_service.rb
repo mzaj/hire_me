@@ -38,10 +38,6 @@ module HireMe
       def question_repository
         @question_repository ||= HireMe::Storage::QuestionRepository.new
       end
-
-      def session
-        session_repository.get_session(session_id)
-      end
     end
   end
 end
