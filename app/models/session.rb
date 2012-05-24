@@ -10,7 +10,7 @@ module HireMe
           :questions => []
         }
 
-        questions.each { |q| hash[:questions].add(q.to_hash) }
+        questions.each { |q| hash[:questions] << q.to_hash }
         hash
       end
 

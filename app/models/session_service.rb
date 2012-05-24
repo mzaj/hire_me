@@ -2,9 +2,8 @@ module HireMe
   module Models
     class SessionService
       def start_session(user)
-        question_list = generate_questions_list
-        session = session_repository.create_session(user, questions)
-        session.id
+        questions = generate_questions_list
+        session_repository.create_session(user, questions)
       end
 
       def get_question(id)

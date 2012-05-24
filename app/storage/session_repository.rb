@@ -8,17 +8,17 @@ module HireMe
       end
 
       def create_session(user, question_list)
-        sessions = collection['sessions']
-
-        session = Session.new
+        session = HireMe::Models::Session.new
         session.user_first_name = user[:first_name]
         session.user_last_name = user[:last_name]
         session.questions = question_list
 
-        sessions.save(session.to_hash)
+        collection.save(session.to_hash).to_s
       end
 
       def get_session(id)
+        session_hash = collection.find(id)
+        HireMe::Models::Session.from_hash(session_hash)
       end
 
       def update_session(session)
