@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem 'sinatra'
+gem 'sinatra-contrib', :require => ['sinatra/content_for']
 gem 'shotgun'
 gem 'rake'
 gem 'mongo'
