@@ -1,29 +1,28 @@
 module HireMe
   module Models
-    class SessionService 
+    class SessionService
       def start_session(user)
         question_list = generate_questions_list
-        session = session_repository.create_session(user, question_list)
-
+        session = session_repository.create_session(user, questions)
         session.id
       end
 
       def get_question(id)
-
+        question_repository.get_question(id)
       end
 
       def get_all_questions(session_id)
-      #[(id, answered?), ..]
+        session = session_repository.get_session(session_id)
+        session.questions.collect { |q| { id: q.id, answered: q.answered? } }
       end
 
-      def get_next_question(question_id)
-      end
-
-      def save_answer(session_id, question_number, answers)
+      def save_answer(session_id, question_id, answer)
+        session = session_repository.get_session(session_id)
+        session.add_answer(question_id, answer)
+        session_repository.update_session(session)
       end
 
       def finish_session(session_id)
-        session_repository.get_session(session_id)
       end
 
       private
@@ -31,6 +30,7 @@ module HireMe
       def generate_questions_list
         question_repository.get_all_questions
       end
+      private
 
       def session_repository
         @session_repository ||= HireMe::Storage::SessionRepository.new
@@ -38,6 +38,10 @@ module HireMe
 
       def question_repository
         @question_repository ||= HireMe::Storage::QuestionRepository.new
+      end
+
+      def session
+        session_repository.get_session(session_id)
       end
     end
   end
