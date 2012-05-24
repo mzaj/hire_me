@@ -1,63 +1,63 @@
 [
-  {
-    id : 0,
-    type : "single",
-    text : "Czy samochód ma koła?",
-    answers : [
-      {
-        id : 0,
-        text : "tak",
-        correct : true
-      },
-      {
-        id : 1,
-        text : "nie",
-        correct : false
-      }
-    ]
-  },
-  {
-    id : 1,
-    type : "multi",
-    text : "Który element jest obowiązkowy w rowerze?",
-    answers : [
-      {
-        id : 0,
-        text : "Pedały",
-        correct : true
-      },
-      {
-        id : 1,
-        text : "Lampka z tyłu",
-        correct : true
-      },
-      {
-        id : 2,
-        text : "Lampka z przodu",
-        correct : true
-      },
-      {
-        id : 3,
-        text : "Trąbka",
-        correct : false
-      }
-    ]
-  },
-  {
-    id : 2,
-    type : "single",
-    text : "Czy jesteś rowerzystą?",
-    answers : [
-      {
-        id : 0,
-        text : "Tak",
-        correct : true
-      },
-      {
-        id : 1,
-        text : "Nie",
-        correct : false
-      }
-    ]
-  }
+    {
+        "answers": [
+            {
+                "correct": true, 
+                "id": 0, 
+                "text": "tak"
+            }, 
+            {
+                "correct": false, 
+                "id": 1, 
+                "text": "nie"
+            }
+        ], 
+        "id": 0, 
+        "text": "Czy samoch\u00f3d ma ko\u0142a?", 
+        "type": "single"
+    }, 
+    {
+        "answers": [
+            {
+                "correct": true, 
+                "id": 0, 
+                "text": "Peda\u0142y"
+            }, 
+            {
+                "correct": true, 
+                "id": 1, 
+                "text": "Lampka z ty\u0142u"
+            }, 
+            {
+                "correct": true, 
+                "id": 2, 
+                "text": "Lampka z przodu"
+            }, 
+            {
+                "correct": false, 
+                "id": 3, 
+                "text": "Tr\u0105bka"
+            }
+        ], 
+        "id": 1, 
+        "text": "Kt\u00f3ry element jest obowi\u0105zkowy w rowerze?", 
+        "type": "multi"
+    }, 
+    {
+        "answers": [
+            {
+                "correct": true, 
+                "id": 0, 
+                "text": "Tak"
+            }, 
+            {
+                "correct": false, 
+                "id": 1, 
+                "text": "Nie"
+            }
+        ], 
+        "id": 2, 
+        "text": "Czy jeste\u015b rowerzyst\u0105?", 
+        "type": "single"
+    }
 ]
