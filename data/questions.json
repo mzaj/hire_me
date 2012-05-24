@@ -12,7 +12,6 @@
                 "text": "nie"
             }
         ], 
-        "id": 0, 
         "text": "Czy samoch\u00f3d ma ko\u0142a?", 
         "type": "single"
     }, 
@@ -39,7 +38,6 @@
                 "text": "Tr\u0105bka"
             }
         ], 
-        "id": 1, 
         "text": "Kt\u00f3ry element jest obowi\u0105zkowy w rowerze?", 
         "type": "multi"
     }, 
@@ -56,7 +54,6 @@
                 "text": "Nie"
             }
         ], 
-        "id": 2, 
         "text": "Czy jeste\u015b rowerzyst\u0105?", 
         "type": "single"
     }
