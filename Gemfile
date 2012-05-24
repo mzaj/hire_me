@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'shotgun'
 gem 'rake'
 gem 'mongo'
+gem 'bson_ext'
 gem 'json'
 
 group :development do
