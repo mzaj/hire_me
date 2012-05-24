@@ -17,7 +17,7 @@ get '/start' do
   erb :question, :layout => :default
 end
 
-get 'question/:session_id/:question_id' do
+get '/question/:session_id/:question_id' do
   question_id = params[:question_id]
   session_id = params[:session_id]
   @session_id = session_id
@@ -28,7 +28,7 @@ get 'question/:session_id/:question_id' do
   erb :question, :layout => nil  
 end
 
-post 'answer/:session_id/:question_id' do
+post '/answer/:session_id/:question_id' do
   question_id = params[:question_id]
   session_id = params[:session_id]
   question_service = HireMe::Models::SessionService.new
