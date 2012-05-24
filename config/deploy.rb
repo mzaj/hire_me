@@ -20,11 +20,6 @@ set :bundle_without, [:development, :test]
 default_run_options[:pty] = true                        # otherwise you won't be asked for the password
 ssh_options[:forward_agent] = true
 
-# configure crontab management
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
-
-
 #configure RVM
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
