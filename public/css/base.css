@@ -110,6 +110,39 @@ p {
     .step .button:hover {
       opacity: 1.0; }
 
+.button {
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  background: #7393ca;
+  color: #f3f9fe;
+  opacity: 0.7;
+  margin: 12px 0px;
+  padding: 5px 20px;
+  border: 1px solid #A1A1A1;
+  border-radius: 5px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); }
+  .button:hover {
+    opacity: 1.0; }
+  .button.super {
+    background: #f58805;
+    opacity: 0.5; }
+    .button.super:hover {
+      opacity: 1.0; }
+
+.start {
+  display: block;
+  width: 400px; }
+  .start p {
+    margin: 10px 0; }
+  .start label {
+    vertical-align: center;
+    padding: 5px; }
+  .start .button {
+    padding: 10px 35px; }
+
 .pager {
   width: 100%;
   color: #666;

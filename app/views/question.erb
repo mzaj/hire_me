@@ -11,18 +11,18 @@
 
 <div class="step">
   <h2 class="question">
-    <%= @question.title %>
+    <%= @current_question.text %>
   </h2>
 
   <ul class="answers">
 
-    <% @question.answers.each do |answer| %>
-      <li id="answer-<%= answer.id %>" class="answer">
-        <%= answer.message %>
+    <% @current_question.answers.each do |answer| %>
+      <li data-value="<%= answer['id'] %>" class="answer">
+        <%= answer['text'] %>
       </li>
     <% end %>
 
-    <li id="answer-5" class="answer inactive code">
+    <li class="answer inactive code">
       Inactive button
     </li>
 

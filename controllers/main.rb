@@ -6,12 +6,16 @@ end
 post '/start' do
   first_name = params[:first_name]
   last_name = params[:last_name]
-
   question_service = HireMe::Models::SessionService.new
   session_id = question_service.start_session({:first_name => first_name, :last_name => last_name})
 
-  @session_id = session_id
-  @questions = question_service.get_all_questions(session_id)
+  redirect "/test/#{session_id}"
+end
+
+get '/quiz/:session_id' do
+  question_service = HireMe::Models::SessionService.new
+  @session_id = params[:session_id]
+  @questions = question_service.get_all_questions(@session_id)
   @current_question = question_service.get_question(@questions.first.id)
   erb :question, :layout => :default
 end
