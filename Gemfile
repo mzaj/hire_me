@@ -9,6 +9,7 @@ gem 'mongo'
 gem 'json'
 
 group :development do
+  gem 'sass'
   gem 'rvm'
   gem 'rvm-capistrano', :require => ['capistrano']
   gem 'capistrano'

@@ -39,8 +39,9 @@ GEM
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.10.1)
     rvm (1.11.3.3)
-    rvm-capistrano (1.2.1)
+    rvm-capistrano (1.2.2)
       capistrano (>= 2.0.0)
+    sass (3.1.18)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.3.2)
@@ -62,5 +63,6 @@ DEPENDENCIES
   rspec
   rvm
   rvm-capistrano
+  sass
   shotgun
   sinatra
