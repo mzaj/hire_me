@@ -1,0 +1,37 @@
+<div class="pager">
+  <ul>
+    <% (1..20).each do |num| %>
+      <li class="<%= num < 10 ? 'digit' : '' %> <%= num % 4 == 0 ? '' : 'answered' %>" >
+        <%= num %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div class="step">
+  <h2 class="question">
+    <%= @question.title %>
+  </h2>
+
+  <ul class="answers">
+
+    <% @question.answers.each do |answer| %>
+      <li id="answer-<%= answer.id %>" class="answer">
+        <%= answer.message %>
+      </li>
+    <% end %>
+
+    <li id="answer-5" class="answer inactive code">
+      Inactive button
+    </li>
+
+  </ul>
+
+  <div class="buttons clearfix">
+    <a href="#" class="button prev">← Prev</a>
+    <a href="#" class="button next">Next →</a>
+    <a href="#" class="button finish">Finish</a>
+  </div>
+
+</div>
