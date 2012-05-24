@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-set :stages, %w(acceptance)
+set :stages, %w(production acceptance)
 set :default_stage, "acceptance"
 require 'capistrano/ext/multistage'
 
@@ -15,13 +15,14 @@ set :deploy_via, :remote_cache
 set :deploy_to, "/opt/hire_me"
 set :use_sudo, false
 
-set :bundle_without, [:development, :test]
+set :domain, 'hotx.resfinity.com'
+
+set :bundle_without,      [:development, :test, :rspec, :deploy]
 
 default_run_options[:pty] = true                        # otherwise you won't be asked for the password
 ssh_options[:forward_agent] = true
 
 #configure RVM
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 set :rvm_type, :system
 
@@ -34,19 +35,18 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
 
     find_servers(:roles => [:app]).each do |host|
-      # ping server to restart passenger
       cmd = "curl -silent http://#{host}/hire_me >/dev/null"
       system(cmd)
     end
   end
-
   task :configure_nginx do
     run "ln -f -s /opt/hire_me/current/public/ /var/www/root/hire_me"
     sudo "/etc/init.d/nginx reload"
   end
 
-  after "deploy:restart", "deploy:git:push_deploy_tag"
+  after  "deploy:restart", "deploy:git:push_deploy_tag"
   before "deploy:cleanup", "deploy:git:cleanup_deploy_tag"
+  after  "deploy:update", "newrelic:notice_deployment"
 
   namespace :git do
     desc "Place release tag into Git and push it to server."
