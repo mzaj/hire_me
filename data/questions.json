@@ -1,5 +1,6 @@
 [
   {
+    id : 0,
     type : "single",
     text : "Czy samochód ma koła?",
     answers : [
@@ -16,6 +17,7 @@
     ]
   },
   {
+    id : 1,
     type : "multi",
     text : "Który element jest obowiązkowy w rowerze?",
     answers : [
@@ -42,6 +44,7 @@
     ]
   },
   {
+    id : 2,
     type : "single",
     text : "Czy jesteś rowerzystą?",
     answers : [
