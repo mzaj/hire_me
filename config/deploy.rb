@@ -15,6 +15,8 @@ set :deploy_via, :remote_cache
 set :deploy_to, "/opt/hire_me"
 set :use_sudo, false
 
+ssh_options[:paranoid] = false
+
 set :domain, 'hotx.resfinity.com'
 
 set :bundle_without,      [:development, :test, :rspec, :deploy]
@@ -46,7 +48,6 @@ namespace :deploy do
 
   after  "deploy:restart", "deploy:git:push_deploy_tag"
   before "deploy:cleanup", "deploy:git:cleanup_deploy_tag"
-  after  "deploy:update", "newrelic:notice_deployment"
 
   namespace :git do
     desc "Place release tag into Git and push it to server."
