@@ -3,7 +3,7 @@
 task :default => 'start'
 
 # Load all external files
-#Dir["app/tasks/**/*.rake*"].sort.each {|ext| load ext}
+Dir["app/tasks/**/*.rake*"].sort.each {|ext| load ext}
 
 desc "Run sinatra web server"
 task :start do
