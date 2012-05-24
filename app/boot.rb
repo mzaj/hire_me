@@ -3,6 +3,9 @@ HM_ENV = ENV["HM_ENV"] ||= ENV["RACK_ENV"] ||= "development" unless defined?(HM_
 
 require 'rubygems'
 require 'bundler/setup'
+require 'sinatra'
+require 'mongo'
+
 Bundler.require(:default, HM_ENV)
 
 
