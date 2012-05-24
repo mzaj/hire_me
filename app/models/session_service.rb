@@ -2,7 +2,7 @@ module HireMe
   module Models
     class SessionService 
       def start_session(user)
-        generate_questions_list
+        question_list = generate_questions_list
         session = session_repository.create_session(user, question_list)
 
         session.id
