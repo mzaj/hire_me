@@ -12,7 +12,7 @@ module HireMe
 
       def get_all_questions(session_id)
         session = session_repository.get_session(session_id)
-        session.questions.collect { |q| { id: q.id, answered: q.answered? } }
+        session.questions
       end
 
       def save_answer(session_id, question_id, answer)
