@@ -12,4 +12,5 @@ group :development do
   gem 'capistrano-ext'
   gem 'rake'
   gem 'rspec'
+  gem 'rack-test', :require => 'rack/test'
 end
