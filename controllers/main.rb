@@ -1,5 +1,4 @@
 
-
 get '/' do
   erb :start, :layout => :default
 end
@@ -25,7 +24,7 @@ get '/question/:session_id/:question_id' do
   @questions = question_service.get_questions(session_id)
   @current_question = question_service.get_question(question_id)
 
-  erb :question, :layout => nil  
+  erb :question, :layout => nil
 end
 
 post '/answer/:session_id/:question_id' do
