@@ -1,3 +1,60 @@
 [
-
+  {
+    type : "single",
+    text : "Czy samochód ma koła?",
+    answers : [
+      {
+        id : 0,
+        text : "tak",
+        correct : true
+      },
+      {
+        id : 1,
+        text : "nie",
+        correct : false
+      }
+    ]
+  },
+  {
+    type : "multi",
+    text : "Który element jest obowiązkowy w rowerze?",
+    answers : [
+      {
+        id : 0,
+        text : "Pedały",
+        correct : true
+      },
+      {
+        id : 1,
+        text : "Lampka z tyłu",
+        correct : true
+      },
+      {
+        id : 2,
+        text : "Lampka z przodu",
+        correct : true
+      },
+      {
+        id : 3,
+        text : "Trąbka",
+        correct : false
+      }
+    ]
+  },
+  {
+    type : "single",
+    text : "Czy jesteś rowerzystą?",
+    answers : [
+      {
+        id : 0,
+        text : "Tak",
+        correct : true
+      },
+      {
+        id : 1,
+        text : "Nie",
+        correct : false
+      }
+    ]
+  }
 ]
