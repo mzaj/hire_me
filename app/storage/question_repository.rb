@@ -4,14 +4,7 @@ module HireMe
       include StorageHelper
 
       def get_all_questions
-        [].tap do |questions|
-          collection.find.each do |question_hash|
-            question = HireMe::Models::Question.new
-            question.id = question_hash['_id'].to_s
-            question.text = question_hash['text']
-            questions << question
-          end
-        end
+        collection.find.collect { |q| HireMe::Models::Question.from_hash(q) }
       end
 
       private

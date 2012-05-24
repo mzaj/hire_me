@@ -17,7 +17,7 @@ module HireMe
       end
 
       def get_session(id)
-        session_hash = collection.find(id)
+        session_hash = collection.find_one(BSON::ObjectId.from_string(id)).to_hash
         HireMe::Models::Session.from_hash(session_hash)
       end
 
