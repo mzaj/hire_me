@@ -1,6 +1,35 @@
+<% content_for :head do %>
 
-<form method="POST" action="/start">
-  <input type=text name="first_name" placeholder="First" />
-  <input type=text name="last_name" placeholder="Last" />
-  <input type=submit value="Kick arse!" />
-</form>
+  <script type="text/javascript">
+   $('#startButton').click(function(e) {
+     e.preventDefault();
+     console.log('foo');
+     $("#startForm").submit();
+   });
+  </script>
+
+<% end %>
+
+<div style="margin: 0 auto; width: 200px;">
+
+  <h2>
+    Let's get started!
+  </h2>
+
+  <form id="startForm" class="start" method="POST" action="/start">
+    <p>
+      <label name="first_name">First Name</label>
+      <input type="text" name="first_name" placeholder="First" />
+    </p>
+    <p>
+      <label name="last_name">Last Name</label>
+      <input type="text" name="last_name" placeholder="Last" />
+    </p>
+
+    <p>
+      <a id="startButton" class="button super" href="#">I'm ready!</a>
+    </p>
+    <input type=submit value=foo />
+  </form>
+
+</div>
