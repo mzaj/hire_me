@@ -1,6 +1,8 @@
 module HireMe
   module Storage
     class QuestionRepository
+      include StorageHelper
+
       def get_all_questions
         [].tap do |questions|
           collection.find.each do |question_hash|
@@ -16,12 +18,6 @@ module HireMe
 
       def collection
         @collection ||= get_collection('questions')
-      end
-
-      def get_collection(collection_name)
-        connection = Mongo::Connection.new
-        db = connection['hire_me']
-        db[collection_name]
       end
     end
   end

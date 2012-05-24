@@ -5,6 +5,7 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default, HM_ENV)
 
+require "#{HM_ROOT}/app/storage/storage_helper"
 
 Dir["#{HM_ROOT}/app/models/**/*.rb"].each { |f| require(f) }
 Dir["#{HM_ROOT}/app/storage/**/*.rb"].each { |f| require(f) }
