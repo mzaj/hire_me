@@ -1,0 +1,5 @@
+development:
+  mongo_host: 'localhost'
+acceptance:
+  mongo_host: 'mongo'
+

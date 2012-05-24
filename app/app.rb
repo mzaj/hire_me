@@ -5,6 +5,9 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default, HM_ENV)
 
+require 'yaml'
+AppConfig = YAML.load_file(HM_ROOT + '/config/app_config.yml')[HM_ENV]
+
 require "#{HM_ROOT}/app/storage/storage_helper"
 
 Dir["#{HM_ROOT}/app/models/**/*.rb"].each { |f| require(f) }
