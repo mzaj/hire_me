@@ -4,3 +4,8 @@ source "https://rubygems.org"
 # gem "rails"
 gem 'sinatra'
 gem 'shotgun'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+end
