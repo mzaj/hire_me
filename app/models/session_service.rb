@@ -3,12 +3,13 @@ module HireMe
     class SessionService 
       def start_session(user)
         generate_questions_list
-        session = session_repository.create_session(user, question_listjj)
+        session = session_repository.create_session(user, question_list)
 
         session.id
       end
 
       def get_question(id)
+
       end
 
       def get_all_questions(session_id)
@@ -29,6 +30,10 @@ module HireMe
 
       def generate_questions_list
         question_repository.get_all_questions
+      end
+
+      def session_repository
+        @session_repository ||= HireMe::Storage::SessionRepository.new
       end
 
       def question_repository

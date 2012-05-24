@@ -1,6 +1,6 @@
 module HireMe
   module Storage
-    class SessionsRepository
+    class SessionRepository
       include StorageHelper
 
       def collection
