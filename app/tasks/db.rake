@@ -1,6 +1,7 @@
 require './app/app'
 
 namespace :db do
+  desc 'Seed database with data from data/questions.json'
   task :seed do
     connection = Mongo::Connection.new
     db = connection['hire_me']
