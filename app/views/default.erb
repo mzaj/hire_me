@@ -7,30 +7,32 @@
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/start.css">
+    <link rel="stylesheet" href="/css/question.css">
 
-    <script src="init.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <%= yield_content :head %>
 
   </head>
 
   <body>
 
-    <div id="wrap">
-
-      <div id="main">
-
+    <div class="main">
+      <header>
         <h1>Hire Me!</h1>
+        <%= yield_content :header %>
+      </header>
 
-        <%= yield %>
-
-      </div>
-
+      <%= yield %>
     </div>
 
-    <div id="footer">
+    <footer>
+    </footer>
 
-    </div>
-
+    <script src="/js/start.js"></script>
+    <script src="/js/question.js"></script>
   </body>
 
 </html>

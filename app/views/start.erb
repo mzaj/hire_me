@@ -1,35 +1,39 @@
-<% content_for :head do %>
-
-  <script type="text/javascript">
-   $('#startButton').click(function(e) {
-     e.preventDefault();
-     console.log('foo');
-     $("#startForm").submit();
-   });
-  </script>
-
-<% end %>
-
-<div style="margin: 0 auto; width: 200px;">
-
+<div class="intro">
   <h2>
-    Let's get started!
+    Hello there!
   </h2>
 
-  <form id="startForm" class="start" method="POST" action="/start">
-    <p>
-      <label name="first_name">First Name</label>
-      <input type="text" name="first_name" placeholder="First" />
-    </p>
-    <p>
-      <label name="last_name">Last Name</label>
-      <input type="text" name="last_name" placeholder="Last" />
-    </p>
+  <p>
+    I bet you're wondering why you're here, sitting in front of a browser.
+    After all, you came here to talk to us about a possible collaboration.
+  </p>
 
-    <p>
-      <a id="startButton" class="button super" href="#">I'm ready!</a>
-    </p>
-    <input type=submit value=foo />
-  </form>
 
+  <p>
+    Don't worry! This will be quick and painless. The answers to the following
+    questions just help use get a basic idea of your technical level of expertise.
+  </p>
+
+  <p>
+    After you're done, we can really dig in and talk with you about a future at anixe.
+    After all, a computer is good at many things, but picking future team members 
+    is not one of them!
+  </p>
 </div>
+
+<form id="startForm" class="start clearfix" method="POST" action="/start">
+  <p>
+    <input type="text" name="first_name" placeholder="First Name" />
+    <label name="first_name">First Name</label>
+  </p>
+
+  <p>
+    <input type="text" name="last_name" placeholder="Last Name" />
+    <label name="last_name">Last Name</label>
+  </p>
+
+  <p>
+    <a id="startButton" class="button spotlight" href="#">I'm ready!</a>
+  </p>
+
+</form>

@@ -1,7 +1,11 @@
-<div class="pager">
+<% content_for :header do %>
+  <a id="finishButton" href="#" class="button">Finish!</a>
+<% end %>
+
+<div class="pager clearfix">
   <ul>
     <% (1..20).each do |num| %>
-      <li class="<%= num < 10 ? 'digit' : '' %> <%= num % 4 == 0 ? '' : 'answered' %>" >
+      <li class="<%= num < 10 ? 'digit' : '' %> <%= num % 4 == 0 ? '' : 'answered' %> <%= num == 9 ? 'current' : '' %>" >
         <%= num %>
       </li>
     <% end %>
@@ -9,29 +13,26 @@
 </div>
 
 
-<div class="step">
-  <h2 class="question">
-    <%= @current_question.text %>
-  </h2>
+<div class="step" id="step">
+  <div class="question">
+    <h2>
+      <%= @current_question.text %>
+    </h2>
+  </div>
 
-  <ul class="answers">
+  <ul class="answers clearfix">
 
     <% @current_question.answers.each do |answer| %>
-      <li data-value="<%= answer['id'] %>" class="answer">
+      <li data-answer-id="<%= answer['id'] %>" class="answer">
         <%= answer['text'] %>
       </li>
     <% end %>
 
-    <li class="answer inactive code">
-      Inactive button
-    </li>
-
   </ul>
 
   <div class="buttons clearfix">
-    <a href="#" class="button prev">← Prev</a>
-    <a href="#" class="button next">Next →</a>
-    <a href="#" class="button finish">Finish</a>
+    <a href="#" id="skipButton" class="button">Skip</a>
+    <a href="#" id="continueButton" class="button spotlight">Continue →</a>
   </div>
 
 </div>

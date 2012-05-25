@@ -1,0 +1,142 @@
+#finishButton {
+  font-size: 32px;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+
+.pager {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+  }
+  li {
+    cursor: pointer;
+    display: block;
+    float: left;
+
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+
+    background-color: #dde8fa;
+    border: 2px solid rgb(180, 180, 180);
+    color: rgb(140, 140, 140);
+    text-align: center;
+
+    margin: 0 4px;
+
+    &.answered {
+      background-color: #B1C9F1;
+    }
+    &.current {
+      background: rgb(245, 136, 5);
+      border: 2px solid #fff;
+      color: #eee;
+    }
+    &:hover {
+      background: rgb(245, 136, 5);
+      border: 2px solid #fff;
+      color: #eee;
+    }
+    &:active {
+      background: #eee;
+      color: rgb(245, 136, 5);
+    }
+  }
+}
+
+.step {
+  font-family: 'Molengo', Georgia, Times, serif;
+}
+
+.question {
+  margin: 25px 0 10px;
+  h2 {
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.answer {
+  cursor: pointer;
+  display: block;
+  width: 410px;
+
+  padding: 5px 10px;
+  margin: 10px 6px;
+  border: 2px solid #B4B4B4;
+  border-radius: 5px;
+
+  font-size: 24px;
+  line-height: 36px;
+
+  background: #DDE8FA;
+  color: #444;
+  opacity: 0.9;
+ 
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+
+
+  &:nth-child(odd) {
+    float: left;
+    clear: left;
+  }
+  &:nth-child(even) {
+    float: right;
+    clear: right;
+  }
+  &.inactive {
+    background: rgb(234, 234, 234);
+    &:hover {
+      opacity: 0.7;
+      color: inherit;
+      background: rgb(234, 234, 234);
+    }
+  }
+  &.chosen {
+    opacity: 1.0;
+    background-color: #F58805;
+    color: #eee;
+  }
+   &:hover {
+    opacity: 1.0;
+    background-color: #F58805;
+    color: #eee;
+  }
+  &:active {
+    color: rgb(245, 136, 5);
+    background-color: rgb(243, 249, 254);
+  }
+}
+
+
+.step .buttons {
+  width: 100%;
+  margin-top: 20px;
+
+
+  #skipButton {
+    float: left;
+  }
+  #continueButton {
+    float: right;
+  }
+}
