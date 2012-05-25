@@ -2,59 +2,53 @@
     {
         "answers": [
             {
-                "correct": true, 
+                "correct": false, 
                 "id": 0, 
-                "text": "tak"
+                "text": "Fixnum"
             }, 
             {
                 "correct": false, 
                 "id": 1, 
-                "text": "nie"
+                "text": "Bignum"
+            },
+            {
+                "correct": true, 
+                "id": 2, 
+                "text": "Numeric"
+            },
+            {
+                "correct": false, 
+                "id": 3, 
+                "text": "BigDecimal"
             }
         ], 
-        "text": "Czy samoch\u00f3d ma ko\u0142a?", 
+        "text": "All Ruby number objects are instance of class:",
         "type": "single"
     }, 
     {
         "answers": [
             {
-                "correct": true, 
+                "correct": false, 
                 "id": 0, 
-                "text": "Peda\u0142y"
+                "text": ".123"
             }, 
             {
                 "correct": true, 
                 "id": 1, 
-                "text": "Lampka z ty\u0142u"
+                "text": "123.45"
             }, 
             {
                 "correct": true, 
                 "id": 2, 
-                "text": "Lampka z przodu"
+                "text": "2.01e10"
             }, 
             {
                 "correct": false, 
                 "id": 3, 
-                "text": "Tr\u0105bka"
+                "text": "\"123.45\""
             }
         ], 
-        "text": "Kt\u00f3ry element jest obowi\u0105zkowy w rowerze?", 
+        "text": "Which of the following are valid floats?",
         "type": "multi"
-    }, 
-    {
-        "answers": [
-            {
-                "correct": true, 
-                "id": 0, 
-                "text": "Tak"
-            }, 
-            {
-                "correct": false, 
-                "id": 1, 
-                "text": "Nie"
-            }
-        ], 
-        "text": "Czy jeste\u015b rowerzyst\u0105?", 
-        "type": "single"
     }
 ]
