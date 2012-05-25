@@ -9,7 +9,7 @@ post '/start' do
   question_service = HireMe::Models::SessionService.new
   session_id = question_service.start_session({:first_name => first_name, :last_name => last_name})
 
-  redirect "/test/#{session_id}"
+  redirect "/quiz/#{session_id}"
 end
 
 get '/quiz/:session_id' do
